@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import { imgVideos } from "./playVideo"
+import moment from "moment"
 import "./PlayVideo.css"
 import type { VideoApiType, ChannelDataTypes, CommentDataType } from "./playVideoTypes.ts"
 import { API_KEY, valueConverter } from "../../data.ts"
-import moment from "moment"
-import { useParams } from "react-router-dom"
 
 const PlayVideo = () => {
-
     const { videoId } = useParams()
 
     const [apiData, setApiData] = useState<VideoApiType>(null)

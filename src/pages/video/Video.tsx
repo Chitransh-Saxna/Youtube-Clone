@@ -5,12 +5,12 @@ import "./Video.css"
 
 const Video = () => {
 
-    const { videoId, categoryId } = useParams()
+    const { categoryId } = useParams()
 
     return (
         <div className="play-container">
-            <PlayVideo videoId={videoId as string}  />
-            <Recommended categoryId={categoryId as string} />
+            <PlayVideo />
+            <Recommended categoryId={Number(categoryId)} />
         </div>
     )
 }

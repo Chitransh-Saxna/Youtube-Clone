@@ -23,7 +23,7 @@ const Feed = ({ category }: FeedPropType) => {
 
     return (
         <div className="feed">
-            {data && data.map((items, index) => (
+            {data && data.map((items) => (
                 <Link to={`video/${items.snippet.categoryId}/${items.id}`} className="card">
                     <img src={items.snippet.thumbnails.medium.url} alt="" />
                     <h2>{items.snippet.title}</h2>
